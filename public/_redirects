@@ -1,0 +1,4 @@
+/icons/*  /icons/:splat  200
+/manifest.webmanifest  /manifest.webmanifest  200
+/favicon.svg  /favicon.svg  200
+/*  /index.html  200

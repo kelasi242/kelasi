@@ -1,0 +1,1 @@
+const prefix='kelasi-data-'; export const newId=()=>crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random()}`; export async function readLocal(id){try{return JSON.parse(localStorage.getItem(prefix+id)||'null')}catch{return null}} export async function writeLocal(id,data){localStorage.setItem(prefix+id,JSON.stringify(data))}
