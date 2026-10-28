@@ -7,9 +7,9 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['logo.svg', 'icons/kelasi-180.png', 'icons/kelasi-192.png', 'icons/kelasi-512.png', 'icons/kelasi-maskable-512.png', 'icons/apple-touch-icon-180.png', 'icons/favicon-32.png', 'favicon.svg'],
+      includeAssets: ['logo.svg', 'icons/kelasi-192.png', 'icons/kelasi-512.png'],
       manifest: false, // Le manifeste est fourni explicitement dans public/manifest.webmanifest.
-      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'], navigateFallback: 'index.html', cleanupOutdatedCaches: true }
+      workbox: { globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'], navigateFallback: 'index.html', cleanupOutdatedCaches: true, skipWaiting: true, clientsClaim: true }
     })
   ]
 });
